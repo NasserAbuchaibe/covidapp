@@ -21,12 +21,12 @@
 
     <form style="margin-top: 50px;" method="post" class="d-flex justify-content-center align-items-center" action="">
         {% csrf_token %}
-        <select class="form-control" style="width: 200px" name="select_country">
+        <select class="form-select" style="width: 200px" name="select_country">
             {% for country in resulist %}
             <option>{{country}}</option>
             {% endfor %}
         </select>
-        <input type="submit" class="btn btn-danger" name="Submit">
+        <input type="submit" class="btn btn-danger" value="Submit">
     </form>
     <h1 style="color: white; text-align: center; margin-top: 150px;">{{select_country}}</h1>
 
@@ -60,7 +60,7 @@
             <p style="text-align: center; color: white">Critical</p>
         </div>
     </div>
-    <footer style="margin-top: 40px;">
+    <footer style="margin-top: 40px; border-top: 2px solid gray; padding: 15px;">
         <p class="copyright text-muted" style="text-align: center;">Copyright &copy; 2020 · Nasser Abuchaibe (Software
             Developer) </p>
         <div class="container">
